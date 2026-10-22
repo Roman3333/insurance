@@ -1,0 +1,21 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --black2: #292d32;
+  --blue: #005bff;
+  --red: #cc2121;
+  --green: #2eb359;
+  --text-primary: #56585c;
+  --text-secondary: #16171a;
+  --bg-color: #ffffff;
+  --bg-light: #f7f8fa;
+  --border-light: #e6ebf0;
+  --bg-blue-light: #f5f9fd;
+  --bg-green-light: #f3fbf5;
+  --bg-purple-light: #f9f6fe;
+  --bg-orange-light: #fdf8f3;
+  --bg-red-light: #fff5f4;
+  --bg-teal-light: #f2f8f9;
+
+  --font-onest: 'Onest', sans-serif;
+}

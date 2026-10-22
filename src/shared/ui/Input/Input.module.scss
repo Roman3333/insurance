@@ -1,0 +1,60 @@
+.label {
+  width: 100%;
+  padding: 14px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  background: var(--white);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.input {
+  width: 100%;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  color: var(--text-secondary);
+  background: var(--white);
+
+  &::placeholder {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    opacity: 0.3;
+  }
+
+  &:focus {
+    appearance: none;
+    -moz-appearance: none;
+  }
+
+  &[type='date'] {
+    color: color-mix(in srgb, var(--text-secondary) 30%, transparent);
+
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+      -webkit-appearance: none;
+    }
+
+    &::-webkit-datetime-edit {
+      color: inherit;
+    }
+
+    &::-webkit-datetime-edit-fields-wrapper {
+      color: inherit;
+    }
+
+    &.filled {
+      color: var(--text-secondary);
+    }
+  }
+}

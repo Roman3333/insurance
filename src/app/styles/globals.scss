@@ -1,0 +1,111 @@
+@import 'normalize.css';
+@import 'theme.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 100vw;
+  min-width: 340px;
+  overflow-x: hidden;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--text-primary);
+  background-color: var(--bg-color);
+  font-family: var(--font-onest);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* img {
+  background-color: var(--bg-light);
+} */
+
+button {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+input,
+label,
+button,
+a,
+li,
+svg,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  transition: all 0.3s;
+}
+
+input:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  margin-top: 80px;
+}
+
+.section {
+  margin-bottom: 60px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1312px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  margin-top: 4px;
+  color: var(--red);
+}
+
+/**
+ * Скроллбар.
+*/
+.scrollbar {
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
