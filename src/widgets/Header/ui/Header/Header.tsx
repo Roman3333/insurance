@@ -1,11 +1,11 @@
 'use client';
 
-// import { useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import { Button } from '@/shared/ui';
-// import { ModalAuth } from '../ModalAuth/ModalAuth';
+import { ModalAuth } from '../ModalAuth/ModalAuth';
 import Logo from '@/svg/logo.svg';
 import Arrow from '@/svg/chevron-down.svg';
 import Notification from '@/svg/notification.svg';
@@ -71,7 +71,7 @@ const NAV_ITEMS: NavItem[] = [
 ];
 
 export const Header = () => {
-  // const [isModalOpen, setisModalOpen] = useState(false);
+  const [isModalOpen, setisModalOpen] = useState(false);
 
   const pathname = usePathname();
 
@@ -145,7 +145,7 @@ export const Header = () => {
               <Notification className={styles.notification} width={24} height={24} />
             </button>
 
-            <Button className={styles.loginButton}>
+            <Button className={styles.loginButton} onClick={() => setisModalOpen(true)}>
               <User className={styles.loginUserIcon} width={20} height={20} />
               <span>Войти</span>
             </Button>
@@ -153,7 +153,7 @@ export const Header = () => {
         </div>
       </div>
 
-      {/* <ModalAuth isModalOpen={isModalOpen} setIsModalOpen={setisModalOpen} /> */}
+      <ModalAuth isModalOpen={isModalOpen} setIsModalOpen={setisModalOpen} />
     </header>
   );
 };
